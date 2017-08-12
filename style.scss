@@ -22,6 +22,7 @@ h1 {
 
 h2 {
 	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
 	padding: 0;
 	margin: 0;
 }
@@ -55,7 +56,7 @@ header {
 
 	@media (min-width: 500px) {
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 
 	#logo {
@@ -64,6 +65,7 @@ header {
 
 		@media (min-width: 500px) {
 			order: 3;
+			margin-right: 50px;
 		}
 	}
 
@@ -88,7 +90,6 @@ header {
 			}
 		}
 	}
-
 	.social {
 		order: 3;
 		@media (min-width: 500px) {
@@ -96,6 +97,41 @@ header {
 		}
 		i {
 			margin: 10px;
+		}
+	}
+}
+
+// Home Page Content =========================================
+
+main {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	.hero {
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		background-image: url("img/itsme.jpg");
+		background-position: right;
+		background-attachment: fixed;
+		background-size: cover;
+		height: 90vh;
+		flex-basis: 100%;
+
+		h1 {
+			background-color: rgba($black, 0.4);
+		}
+
+		h2 {
+			background-color: rgba($black, 0.4);
+			padding-bottom: 5px;
+
+			span {
+				color: $black;
+			}
 		}
 	}
 }
