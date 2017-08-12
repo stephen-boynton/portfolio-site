@@ -4,68 +4,70 @@
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif; }
 
-h4 {
-  color: #564e58;
+h1 {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bolder;
+  padding: 0;
+  margin: 0; }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0; }
+
+h3 {
+  font-family: 'Catamaran', sans-serif;
   text-transform: uppercase;
-  font-size: 15px; }
+  font-weight: lighter;
+  padding: 0;
+  margin: 0; }
+
+p {
+  font-family: 'Roboto', sans-serif; }
 
 .container {
-  background-color: #f2efea;
+  display: flex;
+  flex-direction: column; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #904e55;
+  padding: 10px;
   color: #f2efea; }
-  .container header {
-    display: block;
-    background-color: #904e55;
-    padding: 10px 0px; }
-    .container header .name {
-      font-size: 15px;
-      display: block;
-      margin: 0 auto;
-      text-align: center;
-      padding: 10px 0px;
-      color: #f2efea; }
-      .container header .name h2 {
-        margin-top: 10px;
-        font-weight: lighter; }
-    .container header .social {
-      display: block;
-      text-align: center; }
-  .container main .bio {
-    display: block;
-    text-align: center;
-    width: 75%;
-    margin: 0 auto; }
-    .container main .bio .pic {
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      background-image: url("img/scb.jpg");
-      background-size: cover;
-      margin: 10px auto; }
-    .container main .bio .tiy {
-      color: #262728;
-      font-weight: bolder;
-      margin: 10px 0px; }
-    .container main .bio .skills {
-      color: #262728;
-      line-height: 1.6em;
-      margin-bottom: 10px;
-      padding: 10px 0px;
-      background-color: #bfb48f; }
-  .container main .card-container .card {
-    display: block;
-    width: 100%;
-    height: 25vh; }
-  .container main .card-container .card-1 {
-    background-image: url("img/dog.png");
-    background-size: cover; }
-  .container main .card-container .card-2 {
-    background-image: url("img/calc.png");
-    background-size: cover; }
-  .container main .card-container .card-3 {
-    background-image: url("img/itunes.png");
-    background-size: cover; }
-  .container main .card-container .card-4 {
-    background-image: url("img/recipe.png");
-    background-size: cover; }
+  @media (min-width: 500px) {
+    header {
+      flex-direction: row;
+      justify-content: space-around; } }
+  header #logo {
+    order: 1;
+    padding: 0; }
+    @media (min-width: 500px) {
+      header #logo {
+        order: 3; } }
+  header nav {
+    order: 2;
+    padding-bottom: 10px; }
+    header nav ul {
+      list-style: none;
+      text-decoration: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      header nav ul li {
+        padding: 10px;
+        background-color: #262728;
+        margin: 5px; }
+        header nav ul li a {
+          text-decoration: none;
+          color: white; }
+  header .social {
+    order: 3; }
+    @media (min-width: 500px) {
+      header .social {
+        order: 1; } }
+    header .social i {
+      margin: 10px; }
 
 /*# sourceMappingURL=style.css.map */

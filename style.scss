@@ -1,3 +1,5 @@
+// Overall style ======================================
+
 $tan: #bfb48f;
 $gray: #564e58;
 $red: #904e55;
@@ -11,96 +13,89 @@ $black: #262728;
 	font-family: Helvetica, Arial, sans-serif;
 }
 
-h4 {
-	color: $gray;
-	text-transform: uppercase;
-	font-size: 15px;
+h1 {
+	font-family: 'Catamaran', sans-serif;
+	font-weight: bolder;
+	padding: 0;
+	margin: 0;
 }
 
+h2 {
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+h3 {
+	font-family: 'Catamaran', sans-serif;
+	text-transform: uppercase;
+	font-weight: lighter;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
+// Header Stylin' ==============================================
+
 .container {
-	background-color: $white;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $red;
+	padding: 10px;
 	color: $white;
 
-	header {
-		display: block;
-		background-color: $red;
-		padding: 10px 0px;
+	@media (min-width: 500px) {
+		flex-direction: row;
+		justify-content: space-around;
+	}
 
-		.name {
-			font-size: 15px;
-			display: block;
-			margin: 0 auto;
-			text-align: center;
-			padding: 10px 0px;
-			color: $white;
+	#logo {
+		order: 1;
+		padding: 0;
 
-			h2 {
-				margin-top: 10px;
-				font-weight: lighter;
-			}
-		}
-
-		.social {
-			display: block;
-			text-align: center;
+		@media (min-width: 500px) {
+			order: 3;
 		}
 	}
-	main {
-		.bio {
-			display: block;
-			text-align: center;
-			width: 75%;
-			margin: 0 auto;
 
-			.pic {
-				height: 150px;
-				width: 150px;
-				border-radius: 50%;
-				background-image: url('img/scb.jpg');
-				background-size: cover;
-				margin: 10px auto;
-			}
-			.tiy {
-				color: $black;
-				font-weight: bolder;
-				margin: 10px 0px;
-			}
+	nav {
+		order: 2;
+		padding-bottom: 10px;
+		ul {
+			list-style: none;
+			text-decoration: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
 
-			.skills {
-				color: $black;
-				line-height: 1.6em;
-				margin-bottom: 10px;
-				padding: 10px 0px;
-				background-color: $tan;
+			li {
+				padding: 10px;
+				background-color: $black;
+				margin: 5px;
+				a {
+					text-decoration: none;
+					color: white;
+				}
 			}
 		}
+	}
 
-		.card-container {
-			.card {
-				display: block;
-				width: 100%;
-				height: 25vh;
-			}
-
-			.card-1 {
-				background-image: url('img/dog.png');
-				background-size: cover;
-			}
-
-			.card-2 {
-				background-image: url('img/calc.png');
-				background-size: cover;
-			}
-
-			.card-3 {
-				background-image: url('img/itunes.png');
-				background-size: cover;
-			}
-
-			.card-4 {
-				background-image: url('img/recipe.png');
-				background-size: cover;
-			}
+	.social {
+		order: 3;
+		@media (min-width: 500px) {
+			order: 1;
+		}
+		i {
+			margin: 10px;
 		}
 	}
 }
