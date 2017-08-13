@@ -180,11 +180,13 @@ main {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   background-color: #00cfcc;
   color: #ffffeb;
   padding: 20px; }
+  footer i {
+    margin-right: 10px; }
   footer li {
     list-style: none;
     display: inline-block;
@@ -212,7 +214,8 @@ footer {
 .project-left {
   flex-basis: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   @media (min-width: 900px) {
     .project-right,
     .project-left {
@@ -230,6 +233,27 @@ footer {
 .dog {
   background-image: url("img/dog.png");
   background-size: cover; }
+
+.hover-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: sticky;
+  background-color: rgba(0, 207, 204, 0.7);
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s; }
+  .hover-over a {
+    color: white; }
+  .hover-over i {
+    margin-right: 50px; }
+  .hover-over i:hover {
+    color: #ffed66;
+    cursor: pointer; }
+
+.hover-over:hover {
+  opacity: 1; }
 
 .calc {
   background-image: url("img/calc.png");

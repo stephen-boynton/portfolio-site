@@ -260,11 +260,16 @@ main {
 
 footer {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: center;
 	background-color: $blue;
 	color: $white;
 	padding: 20px;
+
+	i {
+		margin-right: 10px;
+	}
+
 	li {
 		list-style: none;
 		display: inline-block;
@@ -299,6 +304,7 @@ footer {
 	flex-basis: 100%;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 
 	@media (min-width: 900px) {
 		flex-basis: 45%;
@@ -320,6 +326,35 @@ footer {
 .dog {
 	background-image: url("img/dog.png");
 	background-size: cover;
+}
+
+.hover-over {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	position: sticky;
+	background-color: rgba($blue, 0.7);
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.5s;
+
+	a {
+		color: white;
+	}
+
+	i {
+		margin-right: 50px;
+	}
+
+	i:hover {
+		color: $yellow;
+		cursor: pointer;
+	}
+}
+
+.hover-over:hover {
+	opacity: 1;
 }
 
 .calc {
