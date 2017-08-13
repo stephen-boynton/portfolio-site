@@ -124,6 +124,11 @@ header {
 		@media (min-width: 500px) {
 			order: 1;
 		}
+
+		a {
+			color: $yellow;
+		}
+
 		i {
 			margin: 10px;
 		}

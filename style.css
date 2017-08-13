@@ -85,6 +85,8 @@ header {
     @media (min-width: 500px) {
       header .social {
         order: 1; } }
+    header .social a {
+      color: #ffed66; }
     header .social i {
       margin: 10px; }
 
