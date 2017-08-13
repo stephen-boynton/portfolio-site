@@ -1,10 +1,16 @@
 // Overall style ======================================
 
-$tan: #bfb48f;
-$gray: #564e58;
-$red: #904e55;
-$white: #f2efea;
-$black: #262728;
+// $tan: #bfb48f;
+// $gray: #564e58;
+// $red: #904e55;
+// $white: #f2efea;
+// $black: #262728;
+
+$red: #ff5e5b;
+$gray: #d7d7d7;
+$white: #ffffeb;
+$blue: #00cfcc;
+$yellow: #ffed66;
 
 * {
 	padding: 0;
@@ -15,6 +21,7 @@ $black: #262728;
 
 h1 {
 	font-family: 'Catamaran', sans-serif;
+	font-size: 30px;
 	font-weight: bolder;
 	padding: 0;
 	margin: 0;
@@ -23,6 +30,7 @@ h1 {
 h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
+	font-size: 20px;
 	padding: 0;
 	margin: 0;
 }
@@ -31,12 +39,14 @@ h3 {
 	font-family: 'Catamaran', sans-serif;
 	text-transform: uppercase;
 	font-weight: lighter;
+	font-size: 18px;
 	padding: 0;
 	margin: 0;
 }
 
 p {
 	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 }
 
 // Header Stylin' ==============================================
@@ -44,15 +54,16 @@ p {
 .container {
 	display: flex;
 	flex-direction: column;
+	background-color: $white;
 }
 
 header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: $red;
+	background-color: $blue;
 	padding: 10px;
-	color: $white;
+	color: $yellow;
 
 	@media (min-width: 500px) {
 		flex-direction: row;
@@ -60,6 +71,7 @@ header {
 	}
 
 	#logo {
+		font-size: 50px;
 		order: 1;
 		padding: 0;
 
@@ -79,13 +91,19 @@ header {
 			flex-wrap: wrap;
 			justify-content: space-around;
 
-			li {
-				padding: 10px;
-				background-color: $black;
-				margin: 5px;
-				a {
-					text-decoration: none;
-					color: white;
+			.active {
+				background-color: $red;
+				color: $white;
+			}
+
+			a {
+				text-decoration: none;
+				color: $blue;
+
+				li {
+					padding: 10px;
+					background-color: $white;
+					margin: 5px;
 				}
 			}
 		}
@@ -107,6 +125,7 @@ main {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	padding-bottom: 20px;
 
 	.hero {
 		color: $white;
@@ -115,23 +134,113 @@ main {
 		text-align: center;
 		justify-content: center;
 		background-image: url("img/itsme.jpg");
-		background-position: right;
-		background-attachment: fixed;
+		background-position: 80%;
 		background-size: cover;
 		height: 90vh;
 		flex-basis: 100%;
 
+		@media (min-width: 500px) {
+			background-attachment: fixed;
+		}
+
+		@media (min-width: 700px) {
+			background-position: top;
+		}
 		h1 {
-			background-color: rgba($black, 0.4);
+			background-color: rgba($red, 0.4);
 		}
 
 		h2 {
-			background-color: rgba($black, 0.4);
+			background-color: rgba($red, 0.4);
 			padding-bottom: 5px;
 
 			span {
-				color: $black;
+				color: $yellow;
 			}
+		}
+	}
+
+	.scb {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: 500px) {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.me {
+			background-color: $gray;
+			padding: 10px;
+			line-height: 1.6em;
+			margin-top: 10px;
+
+			@media (min-width: 500px) {
+				flex-basis: 45%;
+			}
+
+			@media (min-width: 700px) {
+				flex-basis: 40%;
+			}
+
+			h3 {
+				margin: 0 auto;
+				padding: 5px;
+				background-color: $white;
+				color: $blue;
+				width: fit-content;
+			}
+
+			p {
+				margin-top: 5px;
+
+				span {
+					background-color: $yellow;
+				}
+			}
+			ul {
+				list-style: none;
+
+				span {
+					background-color: $yellow;
+				}
+			}
+		}
+	}
+	.contact {
+		padding: 20px;
+		margin-top: 20px;
+		background-color: $red;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		a {
+			padding: 10px;
+			margin-top: 10px;
+			text-decoration: none;
+			color: black;
+			background-color: $yellow;
+		}
+	}
+}
+
+// Footer style =================================================
+
+footer {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	background-color: $blue;
+	color: $white;
+	padding: 20px;
+	li {
+		list-style: none;
+		display: inline-block;
+		margin: 5px 10px;
+		a {
+			color: white;
+			text-decoration: none;
 		}
 	}
 }
