@@ -169,6 +169,18 @@ main {
     @media (min-width: 700px) {
       main .scb .me-2 {
         flex-basis: 30%; } }
+  main #contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    padding: 50px; }
+    @media (min-width: 500px) {
+      main #contact {
+        width: 60%;
+        border: 1px solid #d7d7d7; } }
   main .contact {
     padding: 20px;
     margin-top: 20px;
@@ -177,6 +189,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media (min-width: 500px) {
+      main .contact {
+        width: 50%; } }
     main .contact a {
       padding: 10px;
       margin-top: 10px;
@@ -193,6 +208,8 @@ footer {
   padding: 20px; }
   footer i {
     margin-right: 10px; }
+  footer a {
+    color: #ffed66; }
   footer li {
     list-style: none;
     display: inline-block;
@@ -204,9 +221,10 @@ footer {
 .page-title {
   flex-basis: 100%;
   text-align: center;
-  background-color: #ff5e5b;
-  color: #ffffeb;
-  margin-bottom: 20px; }
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  color: #ff5e5b;
+  margin: 20px 0; }
 
 .proj-img {
   flex-basis: 100%;
@@ -267,10 +285,12 @@ footer {
 
 .itunes {
   background-image: url("img/itunes.png");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 
 .recipe {
   background-image: url("img/recipe.png");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 
 /*# sourceMappingURL=style.css.map */

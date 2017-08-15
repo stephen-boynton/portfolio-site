@@ -248,6 +248,21 @@ main {
 			}
 		}
 	}
+	#contact {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 50vh;
+		padding: 50px;
+
+		@media (min-width: 500px) {
+			width: 60%;
+			border: 1px solid $gray;
+		}
+	}
+
 	.contact {
 		padding: 20px;
 		margin-top: 20px;
@@ -256,6 +271,10 @@ main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@media (min-width: 500px) {
+			width: 50%;
+		}
 
 		a {
 			padding: 10px;
@@ -281,6 +300,10 @@ footer {
 		margin-right: 10px;
 	}
 
+	a {
+		color: $yellow;
+	}
+
 	li {
 		list-style: none;
 		display: inline-block;
@@ -296,9 +319,10 @@ footer {
 .page-title {
 	flex-basis: 100%;
 	text-align: center;
-	background-color: $red;
-	color: $white;
-	margin-bottom: 20px;
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	color: $red;
+	margin: 20px 0;
 }
 
 .proj-img {
@@ -376,9 +400,11 @@ footer {
 .itunes {
 	background-image: url("img/itunes.png");
 	background-size: cover;
+	background-position: center;
 }
 
 .recipe {
 	background-image: url("img/recipe.png");
 	background-size: cover;
+	background-position: center;
 }
